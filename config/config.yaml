@@ -1,0 +1,12 @@
+mysql:
+  host: 10.17.100.5
+  port: 3306
+  username: backend
+  password: 117@2023
+  dbname: "117web"
+  dev: "charset=utf8mb4&parseTime=True&loc=Local"
+
+system:
+  host: 10.17.100.5
+  port: 8080
+
