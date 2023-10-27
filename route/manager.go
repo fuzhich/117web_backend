@@ -14,5 +14,10 @@ func InitRouter() *gin.Engine {
 		sso.POST("/login", middleware.Cors(), controlller.Login)
 		sso.POST("/register", middleware.Cors(), controlller.Register)
 	}
+
+	person := router.Group("/person")
+	{
+		person.POST("/update", middleware.Cors(), controlller.Update)
+	}
 	return router
 }
