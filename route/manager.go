@@ -14,5 +14,9 @@ func InitRouter() *gin.Engine {
 		sso.POST("/login", middleware.Cors(), controlller.Login)
 		sso.POST("/register", middleware.Cors(), controlller.Register)
 	}
+	lab := router.Group("/lab")
+	{
+		lab.POST("/uploadimage", middleware.Cors(), controlller.UploadImage)
+	}
 	return router
 }

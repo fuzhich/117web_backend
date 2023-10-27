@@ -65,5 +65,5 @@ func Dsn() string { //gorm配置数据库url
 func Init() {
 	IntiConfig()
 	InitDB()
-	DB.AutoMigrate(&model.Person{}, &model.User{})
+	DB.AutoMigrate(&model.Person{}, &model.User{}, &model.Image{})
 }
