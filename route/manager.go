@@ -17,6 +17,7 @@ func InitRouter() *gin.Engine {
 	lab := router.Group("/lab")
 	{
 		lab.POST("/uploadimage", middleware.Cors(), controlller.UploadImage)
+		lab.GET("/getimage", middleware.Cors(), controlller.GetImage)
 	}
 	return router
 }
